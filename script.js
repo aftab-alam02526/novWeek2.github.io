@@ -60,12 +60,15 @@ function displayResults(data) {
   data.forEach(item => {
     const card = document.createElement("div");
     card.className = "card";
+
     card.innerHTML = `
-      <p><strong>Post Office:</strong> ${item.Name}</p>
-      <p><strong>Pincode:</strong> ${item.Pincode}</p>
+      <p><strong>Name:</strong> ${item.Name}</p>
+      <p><strong>Branch Type:</strong> ${item.BranchType}</p>
+      <p><strong>Delivery Status:</strong> ${item.DeliveryStatus}</p>
       <p><strong>District:</strong> ${item.District}</p>
-      <p><strong>State:</strong> ${item.State}</p>
+      <p><strong>Division:</strong> ${item.Division}</p>
     `;
+
     resultsDiv.appendChild(card);
   });
 }
